@@ -8,7 +8,7 @@ function printImmediately(print) {
     print();
 }
 
-printImmediately(()=> console.log('hello!'))
+printImmediately(()=> console.log('hello!!'))
 
 
 function printWithDelay(print, timeout) {
