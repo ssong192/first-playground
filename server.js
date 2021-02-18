@@ -6,9 +6,11 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
+app.use('/script', express.static(__dirname + "/script"));
+
 var requestTime = function (req, res, next) {
     req.requestTime = Date.now();
-    console.log(Date.now());
+    console.log(Date.now(), 'middle');
     next();
 };
 
